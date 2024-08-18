@@ -28,9 +28,10 @@ metadata:
 spec:
   selector:
     app: nodeapp
-  type: LoadBalancer
+  type: NodePort
   ports:
     - protocol: TCP
       port: 5000
       targetPort: 3000
-      nodePort: 31110
+      # If you want to specify a nodePort, uncomment the next line:
+      # nodePort: 31110
